@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-deep font-sans text-ink antialiased;
+  margin: 0;
+}
+
+::selection {
+  background: rgba(212, 169, 74, 0.32);
+  color: #f5f3ee;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0c10;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2f3a;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8a6f2e;
+}
+
+@layer components {
+  /* ---------- Kontainer utama ---------- */
+  .shell {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  /* ---------- Eyebrow kecil di atas judul section ---------- */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-widest2 text-gold;
+  }
+  .eyebrow::before {
+    content: '';
+    @apply h-px w-8 bg-gold-dim;
+  }
+
+  /* ---------- Judul section ---------- */
+  .section-title {
+    @apply font-display text-3xl leading-tight text-ink sm:text-4xl lg:text-[2.75rem];
+  }
+
+  /* ---------- Tombol utama (emas) ---------- */
+  .btn-gold {
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-b from-gold-bright to-gold px-7 py-3.5 text-sm font-semibold text-[#1A1206] shadow-gold transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_70px_-18px_rgba(212,169,74,0.55)];
+  }
+  .btn-gold::after {
+    content: '';
+    @apply absolute inset-y-0 -left-full w-1/2 skew-x-[-20deg] bg-white/[0.35] transition-all duration-700;
+  }
+  .btn-gold:hover::after {
+    left: 130%;
+  }
+
+  /* ---------- Tombol sekunder (outline) ---------- */
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.03] px-7 py-3.5 text-sm font-medium text-ink backdrop-blur transition-all duration-300 hover:border-gold/50 hover:bg-gold/[0.07] hover:text-gold-bright;
+  }
+
+  /* ---------- Kartu dasar ---------- */
+  .card {
+    @apply relative rounded-2xl border border-white/[0.07] bg-surface/80 backdrop-blur-sm;
+  }
+
+  /* ---------- Aksen garis emas tipis ---------- */
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-gold-dim/60 to-transparent;
+  }
+}
+
+/* ---------- Reduced motion: matikan semua animasi ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
