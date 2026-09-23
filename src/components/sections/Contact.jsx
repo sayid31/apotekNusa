@@ -28,10 +28,10 @@ export default function Contact() {
           eyebrow="Kunjungi Kami"
           title={
             <>
-              Siap melayani Anda, <span className="italic text-gold">kapan saja</span>
+              Ada yang bisa <span className="italic text-gold">kami bantu?</span>
             </>
           }
-          subtitle="Datang langsung, telepon, atau kirim pesan — apoteker kami siap membantu."
+          subtitle="Datang langsung, telepon, atau kirim pesan. Apoteker kami bantu jawab, termasuk kalau cuma mau tanya-tanya."
         />
 
         <div className="grid gap-6 lg:grid-cols-[1fr_1.1fr]">
@@ -137,7 +137,7 @@ export default function Contact() {
                     Butuh obat mendadak?
                   </span>
                   <span className="mt-0.5 block text-sm text-ink-muted">
-                    Chat sekarang, apoteker kami balas dalam hitungan menit.
+                    Chat aja sekarang, apoteker kami balas cepat.
                   </span>
                 </span>
               </div>

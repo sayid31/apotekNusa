@@ -4,7 +4,7 @@
 
 export const brand = {
   name: 'Apotek Nusa',
-  tagline: 'Apotek Terpercaya, Melayani dengan Hati',
+  tagline: 'Obat asli, apoteker ramah, buka 24 jam',
   phone: '+62 812-3456-7890',
   waLink: 'https://wa.me/6281234567890',
   email: 'halo@apotecnusa.id',
@@ -27,23 +27,23 @@ export const nav = [
 
 export const hero = {
   badge: 'Buka 24 Jam • Apoteker Bersertifikat',
-  title: ['Jaga', 'Kesehatan', 'Keluarga', 'dari', 'Sekarang'],
-  highlightWord: 'Kesehatan',
+  title: ['Jaga', 'kesehatan', 'keluarga', 'mulai', 'sekarang'],
+  highlightWord: 'kesehatan',
   subtitle:
-    'Apotek Nusa menyediakan obat asli, konsultasi apoteker, dan pengantaran cepat ke rumah Anda. Transparan, aman, dan selalu siap kapan pun Anda butuhkan.',
-  primaryCta: 'Pesan Sekarang',
+    'Obatnya asli semua, apotekernya ramah diajak tanya-tanya, dan kalau tidak sempat keluar, obatnya bisa diantar ke rumah.',
+  primaryCta: 'Kirim Resep',
   secondaryCta: 'Konsultasi Gratis',
   miniStats: [
     { value: '4.9', label: 'Rating Google' },
-    { value: '24/7', label: 'Siap Melayani' },
+    { value: '24/7', label: 'Selalu Buka' },
     { value: '100%', label: 'Obat Asli' },
   ],
 }
 
 export const stats = [
   { value: 12500, suffix: '+', label: 'Pelanggan Setia' },
-  { value: 24, suffix: ' Jam', label: 'Layanan Nonstop' },
-  { value: 3200, suffix: '+', label: 'Resep Diabaca' },
+  { value: 24, suffix: ' Jam', label: 'Buka Terus' },
+  { value: 3200, suffix: '+', label: 'Resep Ditebus' },
   { value: 45, suffix: ' Menit', label: 'Rata-rata Antar' },
 ]
 
@@ -51,32 +51,32 @@ export const services = [
   {
     icon: 'receipt',
     title: 'Penebusan Resep',
-    desc: 'Kirim resep via WhatsApp, kami siapkan dan antar tanpa antre.',
+    desc: 'Fotokan resepnya lewat WhatsApp, obatnya kami siapkan. Tidak perlu antre.',
   },
   {
     icon: 'chat',
     title: 'Konsultasi Apoteker',
-    desc: 'Tanya dosis, efek samping, dan interaksi obat langsung dengan ahlinya.',
+    desc: 'Bingung obat ini diminumnya kapan? Tanya langsung ke apoteker kami.',
   },
   {
     icon: 'stethoscope',
     title: 'Cek Kesehatan Ringan',
-    desc: 'Cek tekanan darah, gula darah, dan kolesterol di tempat, gratis.',
+    desc: 'Tensi, gula darah, dan kolesterol bisa dicek langsung di tempat, gratis.',
   },
   {
     icon: 'truck',
     title: 'Antar Cepat',
-    desc: 'Pengantaran rata-rata 45 menit untuk area Jakarta Pusat sekitarnya.',
+    desc: 'Rata-rata 45 menit sampai ke rumah, khusus area Jakarta Pusat sekitarnya.',
   },
   {
     icon: 'shield',
     title: 'Jaminan Obat Asli',
-    desc: 'Seluruh produk terdaftar BPOM, disimpan dengan rantai dingin tepat.',
+    desc: 'Kami ambil obatnya dari distributor resmi, semuanya terdaftar BPOM.',
   },
   {
     icon: 'bell',
     title: 'Pengingat Obat',
-    desc: 'Notifikasi rutin agar Anda dan keluarga tidak lupa minum obat.',
+    desc: 'Biar obat rutin tidak ada yang kelupaan, kami kirim pengingat lewat WhatsApp.',
   },
 ]
 
@@ -131,44 +131,44 @@ export const testimonials = [
     role: 'Ibu dari dua anak',
     rating: 5,
     quote:
-      'Anak saya demam tengah malam dan apotek lain tutup. Apotek Nusa antar obatnya dalam 40 menit. Sangat terbantu.',
+      'Anak saya demam jam 12 malam, apotek lain tutup semua. Untungnya Apotek Nusa antar, 40 menit sudah sampai. Lega banget.',
   },
   {
     name: 'Bagas Pratama',
-    role: 'Pasien kronis',
+    role: 'Langganan tetap',
     rating: 5,
     quote:
-      'Saya rutin beli obat darah tinggi. Harganya transparan dan apotekernya sabar menjelaskan cara minumnya.',
+      'Saya rutin beli obat darah tinggi di sini. Harganya jelas, dan apotekernya sabar menjelaskan cara minumnya.',
   },
   {
     name: 'Siti Marlina',
     role: 'Pekerja kantoran',
     rating: 5,
     quote:
-      'Kirim resep lewat WhatsApp, sorenya obat sudah sampai kantor. Praktis dan tidak perlu antre panjang.',
+      'Kirim resep lewat WhatsApp pas jam kerja, sorenya obat sudah sampai di kantor. Tinggal tunggu, tidak perlu antre.',
   },
 ]
 
 export const faqs = [
   {
-    q: 'Apakah obat yang dijual dijamin asli?',
-    a: 'Ya. Seluruh produk kami dibeli langsung dari distributor resmi, terdaftar BPOM, dan disimpan sesuai standar suhu penyimpanan. Anda bisa memindai kode verifikasi pada kemasan.',
+    q: 'Obatnya dijamin asli semua kan?',
+    a: 'Dijamin. Kami beli langsung dari distributor resmi, semuanya terdaftar BPOM, dan disimpan sesuai standar suhu. Kalau mau cek sendiri, kode verifikasinya ada di kemasan.',
   },
   {
-    q: 'Bagaimana cara mengirim resep dokter?',
-    a: 'Cukup kirim foto resep yang jelas melalui WhatsApp. Apoteker kami akan memeriksa ketersediaan, mengonfirmasi total biaya, lalu mengantarkan obat ke alamat Anda.',
+    q: 'Gimana cara kirim resep dokter?',
+    a: 'Gampang: fotokan resepnya, kirim lewat WhatsApp. Nanti apoteker yang cek stok dan total biayanya dulu, setelah itu obat kami antar ke alamat Anda.',
   },
   {
     q: 'Berapa lama pengantaran obat?',
-    a: 'Rata-rata 45 menit untuk area Jakarta Pusat dan sekitarnya. Pesanan di luar jam operasional akan diantar pada pagi hari berikutnya, kecuali layanan darurat 24 jam.',
+    a: 'Rata-rata 45 menit di Jakarta Pusat sekitarnya. Kalau pesan di luar jam buka, obatnya kami antar pagi harinya, kecuali Anda pakai layanan darurat 24 jam.',
   },
   {
-    q: 'Apakah bisa konsultasi tanpa membeli obat?',
-    a: 'Bisa. Konsultasi dasar dengan apoteker kami gratis dan tanpa kewajiban membeli. Kami akan menyarankan solusi paling aman sesuai kondisi Anda.',
+    q: 'Kalau cuma mau tanya-tanya, boleh?',
+    a: 'Boleh. Tanya itu gratis, tidak harus beli. Nanti kami bantu carikan yang paling aman untuk kondisi Anda.',
   },
   {
-    q: 'Metode pembayaran apa saja yang diterima?',
-    a: 'Tunai di tempat, transfer bank, QRIS, serta dompet digital seperti GoPay, OVO, dan ShopeePay. Untuk pesanan antar, pembayaran dapat dilakukan saat barang diterima.',
+    q: 'Bisa bayar pakai apa saja?',
+    a: 'Tunai, transfer, QRIS, sama GoPay/OVO/ShopeePay juga bisa. Untuk pesanan antar, boleh bayar pas barangnya sampai.',
   },
 ]
 

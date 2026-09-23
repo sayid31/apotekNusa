@@ -12,7 +12,7 @@ function mapsLink(address) {
 
 function waLink(outlet) {
   return `${brand.waLink}?text=${encodeURIComponent(
-    `Halo ${outlet.name}, saya ingin bertanya tentang ketersediaan obat.`,
+    `Halo ${outlet.name}, saya mau tanya stok obat.`,
   )}`
 }
 
@@ -131,7 +131,7 @@ export default function Outlets() {
               Temukan Apotek Nusa <span className="italic text-gold">terdekat</span>
             </>
           }
-          subtitle="Enam cabang tersebar di Jakarta, Bandung, dan Surabaya — semua melayani resep, konsultasi, dan pengantaran."
+          subtitle="Enam cabang di Jakarta, Bandung, dan Surabaya. Semuanya melayani resep, konsultasi, dan antar obat."
         />
 
         {/* ============ Kontrol pencarian ============ */}
@@ -144,7 +144,7 @@ export default function Outlets() {
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Cari outlet… (nama, kota, atau alamat)"
+                placeholder="Cari outlet… (nama atau kota)"
                 aria-label="Cari outlet"
                 className="w-full rounded-full border border-white/10 bg-deep/70 py-3 pl-11 pr-4 text-sm text-ink outline-none transition-all duration-300 placeholder:text-ink-muted focus:border-gold/50 focus:ring-2 focus:ring-gold/15"
               />
@@ -179,7 +179,7 @@ export default function Outlets() {
           <div>
             <div className="mb-4 flex items-center justify-between">
               <p className="text-xs uppercase tracking-widest2 text-ink-muted">
-                {filtered.length} outlet ditemukan
+                {filtered.length} outlet ketemu
               </p>
               {(query || city !== 'Semua') && (
                 <button
@@ -213,7 +213,7 @@ export default function Outlets() {
                 <div className="card p-10 text-center">
                   <IconSearch className="mx-auto h-8 w-8 text-gold-dim" />
                   <p className="mt-4 font-display text-lg text-ink">
-                    Outlet tidak ditemukan
+                    Belum ketemu outletnya, coba kata kunci lain
                   </p>
                   <p className="mt-2 text-sm text-ink-muted">
                     Coba kata kunci lain atau reset filter kota.

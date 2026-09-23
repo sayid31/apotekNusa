@@ -9,7 +9,7 @@ export function getOpenStatus(now = new Date(), closeHour = 23) {
   const hour = now.getHours() + now.getMinutes() / 60
 
   if (closeHour >= 24 || day === 0) {
-    return { open: true, label: 'Buka — 24 Jam' }
+    return { open: true, label: 'Buka sekarang — 24 jam' }
   }
 
   const close = day === 6 ? Math.min(closeHour, 22) : closeHour
@@ -18,8 +18,8 @@ export function getOpenStatus(now = new Date(), closeHour = 23) {
   return {
     open,
     label: open
-      ? `Buka — tutup pukul ${close}.00`
-      : 'Tutup — buka lagi pukul 07.00',
+      ? `Masih buka — tutup ${close}.00`
+      : 'Sudah tutup — buka lagi 07.00',
   }
 }
 

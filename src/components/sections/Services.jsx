@@ -27,12 +27,11 @@ export default function Services() {
           eyebrow="Layanan Kami"
           title={
             <>
-              Semua kebutuhan kesehatan,{' '}
-              <span className="italic text-gold">satu tempat</span>
+              Bisa dibantu <span className="italic text-gold">apa aja</span>
             </>
           }
           subtitle={
-            'Dari menebus resep hingga konsultasi harian — dirancang supaya Anda tidak perlu repot dan tidak perlu menunggu lama.'
+            'Dari menebus resep sampai tanya obat harian, semuanya bisa lewat WhatsApp atau mampir langsung. Tidak perlu antre lama.'
           }
         />
 

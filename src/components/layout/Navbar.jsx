@@ -59,7 +59,7 @@ export default function Navbar() {
 
         <div className="flex items-center gap-3">
           <a href="#kontak" className="btn-gold hidden !px-6 !py-2.5 text-[13px] sm:inline-flex">
-            Pesan Obat
+            Chat Apoteker
             <IconArrow className="h-4 w-4" />
           </a>
 
@@ -116,7 +116,7 @@ export default function Navbar() {
                   className="btn-gold w-full"
                   onClick={() => setOpen(false)}
                 >
-                  Pesan via WhatsApp
+                  Chat via WhatsApp
                 </a>
               </li>
             </ul>

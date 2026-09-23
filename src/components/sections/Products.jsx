@@ -98,7 +98,7 @@ export default function Products() {
             </>
           }
           subtitle={
-            'Harga transparan, stok selalu tersedia, dan setiap produk terdaftar resmi di BPOM.'
+            'Harganya jelas dari awal, stok jarang kosong, dan semuanya terdaftar BPOM.'
           }
         />
 

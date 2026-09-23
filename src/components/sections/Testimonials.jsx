@@ -34,10 +34,10 @@ export default function Testimonials() {
           eyebrow="Testimoni"
           title={
             <>
-              Dipercaya ribuan keluarga <span className="italic text-gold">Indonesia</span>
+              Cerita dari <span className="italic text-gold">pelanggan kami</span>
             </>
           }
-          subtitle="Ulasan asli dari pelanggan yang rutin melayani kesehatan keluarganya bersama kami."
+          subtitle="Ulasan asli, ditulis sendiri oleh pelanggan yang biasa belanja di sini."
         />
 
         <div className="grid gap-5 md:grid-cols-3">

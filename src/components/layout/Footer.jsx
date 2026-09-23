@@ -19,8 +19,8 @@ export default function Footer() {
               </div>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-muted">
-              Apotek keluarga yang mengutamakan keaslian produk, transparansi harga,
-              dan saran obat yang benar dari apoteker bersertifikat.
+              Apotek keluarga di Menteng. Obatnya asli, harganya jelas, dan
+              apotekernya sabar jawab pertanyaan.
             </p>
             <div className="mt-6 flex gap-3">
               {[IconInstagram, IconFacebook, IconWhatsapp].map((Icon, i) => (
@@ -77,7 +77,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-between gap-3 text-xs text-ink-muted sm:flex-row">
           <p>© {new Date().getFullYear()} {brand.name}. Seluruh hak cipta dilindungi.</p>
           <p>
-            Dibuat dengan hati untuk kesehatan yang lebih baik
+            Terima kasih sudah mampir
           </p>
         </div>
       </div>
