@@ -29,36 +29,46 @@ export default function FAQ() {
         <div className="mx-auto max-w-3xl divide-y divide-white/[0.07] rounded-2xl border border-white/[0.07] bg-surface/70 backdrop-blur">
           {faqs.map((f, i) => {
             const isOpen = open === i
+            const btnId = `faq-btn-${i}`
+            const panelId = `faq-panel-${i}`
             return (
               <Reveal key={f.q} delay={i * 0.06}>
                 <div className="px-5 sm:px-7">
-                  <button
-                    type="button"
-                    onClick={() => setOpen(isOpen ? -1 : i)}
-                    aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-5 py-5 text-left"
-                  >
-                    <span
-                      className={`text-[15px] font-medium transition-colors duration-300 sm:text-base ${
-                        isOpen ? 'text-gold-bright' : 'text-ink'
-                      }`}
+                  <h3>
+                    <button
+                      type="button"
+                      id={btnId}
+                      onClick={() => setOpen(isOpen ? -1 : i)}
+                      aria-expanded={isOpen}
+                      aria-controls={panelId}
+                      className="flex w-full items-center justify-between gap-5 py-5 text-left"
                     >
-                      {f.q}
-                    </span>
-                    <span
-                      className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ${
-                        isOpen
-                          ? 'rotate-180 border-gold/50 bg-gold/10 text-gold'
-                          : 'border-white/[0.12] text-ink-muted'
-                      }`}
-                    >
-                      <IconChevron className="h-4 w-4" />
-                    </span>
-                  </button>
+                      <span
+                        className={`text-[15px] font-medium transition-colors duration-300 sm:text-base ${
+                          isOpen ? 'text-gold-bright' : 'text-ink'
+                        }`}
+                      >
+                        {f.q}
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full border transition-all duration-500 ${
+                          isOpen
+                            ? 'rotate-180 border-gold/50 bg-gold/10 text-gold'
+                            : 'border-white/[0.12] text-ink-muted'
+                        }`}
+                      >
+                        <IconChevron className="h-4 w-4" />
+                      </span>
+                    </button>
+                  </h3>
 
                   <AnimatePresence initial={false}>
                     {isOpen && (
                       <motion.div
+                        id={panelId}
+                        role="region"
+                        aria-labelledby={btnId}
                         initial={reduced ? false : { height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={reduced ? undefined : { height: 0, opacity: 0 }}

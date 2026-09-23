@@ -19,27 +19,28 @@ function waLink(outlet) {
 function OutletCard({ outlet, now, selected, onSelect }) {
   const status = getOpenStatus(now, outlet.close)
   const hours = outlet.close >= 24 ? '24 Jam' : `07.00 – ${outlet.close}.00`
+  const cardId = `outlet-${outlet.id}`
 
   return (
     <div
-      role="button"
-      tabIndex={0}
-      onClick={onSelect}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          onSelect()
-        }
-      }}
-      className={`card cursor-pointer p-5 transition-all duration-400 outline-none ${
+      className={`card p-5 transition-all duration-400 ${
         selected
           ? 'border-gold/50 bg-elevated/70 shadow-card'
-          : 'hover:-translate-y-0.5 hover:border-gold/30 focus-visible:border-gold/50'
+          : 'hover:-translate-y-0.5 hover:border-gold/30'
       }`}
     >
       <div className="flex items-start justify-between gap-4">
         <div>
-          <h3 className="font-display text-lg leading-snug text-ink">{outlet.name}</h3>
+          {/* Judul sekaligus pemicu pilih — tombol sungguhan, bisa diakses keyboard */}
+          <button
+            type="button"
+            onClick={onSelect}
+            aria-pressed={selected}
+            aria-controls="peta-outlet"
+            className="text-left font-display text-lg leading-snug text-ink outline-none transition-colors hover:text-gold-bright focus-visible:text-gold-bright"
+          >
+            {outlet.name}
+          </button>
           <span className="mt-2 inline-block rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-[10px] uppercase tracking-widest text-ink-muted">
             {outlet.city}
           </span>
@@ -64,7 +65,7 @@ function OutletCard({ outlet, now, selected, onSelect }) {
         </p>
         <p className="flex items-center gap-2.5">
           <IconClock className="h-4 w-4 shrink-0 text-gold-dim" />
-          {hours}
+          <span>{hours}</span>
         </p>
       </div>
 
@@ -73,23 +74,25 @@ function OutletCard({ outlet, now, selected, onSelect }) {
           href={mapsLink(outlet.address)}
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => e.stopPropagation()}
           className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-ink transition-all duration-300 hover:border-gold/50 hover:text-gold-bright"
         >
           Rute
           <IconArrow className="h-3.5 w-3.5" />
+          <span className="sr-only">ke {outlet.name} di Google Maps</span>
         </a>
         <a
           href={waLink(outlet)}
           target="_blank"
           rel="noreferrer"
-          onClick={(e) => e.stopPropagation()}
           aria-label={`Chat ${outlet.name} via WhatsApp`}
           className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-teal/30 bg-teal/10 text-teal transition-all duration-300 hover:bg-teal/20"
         >
           <IconWhatsapp className="h-4 w-4" />
         </a>
       </div>
+      <span id={cardId} className="sr-only">
+        {selected ? 'Sedang ditampilkan di peta' : ''}
+      </span>
     </div>
   )
 }
@@ -233,7 +236,7 @@ export default function Outlets() {
           {/* Peta */}
           <Reveal delay={0.15} className="lg:sticky lg:top-24 lg:self-start">
             <div className="card overflow-hidden">
-              <div className="relative h-[320px] sm:h-[380px]">
+              <div id="peta-outlet" className="relative h-[320px] sm:h-[380px]">
                 <CityMap
                   pins={filtered.map((o) => ({
                     id: o.id,

@@ -108,7 +108,7 @@ export default function Products() {
               <article className="card group h-full overflow-hidden transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-card">
                 {/* Panel gambar */}
                 <div className="relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-b from-elevated to-surface">
-                  <div className="absolute h-28 w-28 rounded-full bg-gold/[0.15] blur-2xl transition-all duration-700 group-hover:h-36 group-hover:w-36 group-hover:bg-gold/[0.25]" />
+                  <div className="glow-gold absolute h-28 w-28 rounded-full transition-all duration-700 group-hover:h-36 group-hover:w-36" />
                   <div className="relative h-28 w-28 transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3">
                     <ProductArt art={p.art} />
                   </div>

@@ -242,7 +242,7 @@ export default function Hero() {
     my.set(((e.clientY - rect.top) / rect.height - 0.5) * 2)
   }
 
-  const titleDelay = 0.25
+  const titleDelay = 0.12
 
   return (
     <section
@@ -251,14 +251,14 @@ export default function Hero() {
       onMouseMove={onMouseMove}
       className="relative overflow-hidden pt-28 pb-16 sm:pt-32 lg:pt-36 lg:pb-24"
     >
-      {/* Latar: glow emas lembut */}
+      {/* Latar: glow emas lembut (radial-gradient, tanpa blur) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full bg-gold/[0.10] blur-[130px]"
+        className="glow-gold pointer-events-none absolute -top-40 right-[-10%] h-[560px] w-[560px] rounded-full"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-[-20%] left-[-15%] h-[420px] w-[420px] rounded-full bg-teal/[0.07] blur-[120px]"
+        className="glow-teal pointer-events-none absolute bottom-[-20%] left-[-15%] h-[420px] w-[420px] rounded-full"
       />
 
       <div className="shell relative grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-8">
@@ -303,11 +303,12 @@ export default function Hero() {
             ))}
           </h1>
 
-          {/* Subjudul */}
+          {/* Subjudul — tanpa opacity gate: langsung visible saat paint pertama
+              (elemen LCP), animasinya cukup slide-up */}
           <motion.p
-            initial={reduced ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: titleDelay + 0.5, ease: [0.22, 1, 0.36, 1] }}
+            initial={reduced ? false : { y: 20 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.9, delay: titleDelay + 0.3, ease: [0.22, 1, 0.36, 1] }}
             className="mt-6 max-w-xl text-[15px] leading-relaxed text-ink-muted sm:text-[16.5px]"
           >
             {hero.subtitle}
@@ -317,7 +318,7 @@ export default function Hero() {
           <motion.div
             initial={reduced ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: titleDelay + 0.65, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.9, delay: titleDelay + 0.45, ease: [0.22, 1, 0.36, 1] }}
             className="mt-9 flex flex-wrap items-center gap-4"
           >
             <a href="#kontak" className="btn-gold">
@@ -339,7 +340,7 @@ export default function Hero() {
           <motion.div
             initial={reduced ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: titleDelay + 0.9 }}
+            transition={{ duration: 1, delay: titleDelay + 0.65 }}
             className="mt-11 flex flex-wrap gap-x-10 gap-y-5"
           >
             {hero.miniStats.map((s) => (
@@ -357,11 +358,11 @@ export default function Hero() {
         <motion.div
           initial={reduced ? false : { opacity: 0, scale: 0.94 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.2, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1.2, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="relative mx-auto aspect-square w-full max-w-[520px]"
         >
-          {/* Glow di belakang ilustrasi */}
-          <div className="absolute inset-8 rounded-full bg-gold/[0.12] blur-[90px]" />
+          {/* Glow di belakang ilustrasi (radial-gradient, tanpa blur) */}
+          <div className="glow-gold absolute inset-8 rounded-full" />
 
           <motion.div
             style={reduced ? undefined : { x: backX, y: backY }}

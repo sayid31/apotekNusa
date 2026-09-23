@@ -58,6 +58,7 @@ export default function CityMap({ pins = [], onPinClick, className = '' }) {
           transform={`translate(${p.x} ${p.y})`}
           className={onPinClick ? 'cursor-pointer' : ''}
           onClick={onPinClick ? () => onPinClick(p.id) : undefined}
+          aria-hidden="true"
         >
           {p.selected && (
             <circle r="26" fill="#D4A94A" fillOpacity="0.16" className="animate-pulse-soft" />

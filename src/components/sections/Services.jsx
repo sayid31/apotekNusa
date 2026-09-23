@@ -44,7 +44,7 @@ export default function Services() {
                 <article className="card group h-full p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-card">
                   {/* Ikon */}
                   <div className="relative inline-flex h-14 w-14 items-center justify-center rounded-xl border border-gold/25 bg-gold/[0.08] text-gold transition-all duration-500 group-hover:bg-gold/[0.16] group-hover:text-gold-bright">
-                    <Icon className="h-6.5 w-6.5 h-[26px] w-[26px]" />
+                    <Icon className="h-[26px] w-[26px]" />
                     <span className="absolute inset-0 rounded-xl bg-gold/20 opacity-0 blur-lg transition-opacity duration-500 group-hover:opacity-100" />
                   </div>
 

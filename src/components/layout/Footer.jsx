@@ -13,7 +13,7 @@ export default function Footer() {
               <Logo className="h-11 w-11" />
               <div className="leading-tight">
                 <div className="font-display text-lg text-ink">{brand.name}</div>
-                <div className="text-[10px] uppercase tracking-widest2 text-gold-dim">
+                <div className="text-[10px] uppercase tracking-widest2 text-gold/80">
                   Pharmacy
                 </div>
               </div>
@@ -32,7 +32,7 @@ export default function Footer() {
                   aria-label="Sosial media Apotek Nusa"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-ink-muted transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/60 hover:text-gold"
                 >
-                  <Icon className="h-4.5 w-4.5 h-[18px] w-[18px]" />
+                  <Icon className="h-[18px] w-[18px]" />
                 </a>
               ))}
             </div>
@@ -40,7 +40,7 @@ export default function Footer() {
 
           {/* Navigasi */}
           <Reveal delay={0.08}>
-            <h4 className="text-xs uppercase tracking-widest2 text-gold">Navigasi</h4>
+            <h3 className="text-xs uppercase tracking-widest2 text-gold">Navigasi</h3>
             <ul className="mt-5 space-y-3">
               {nav.map((item) => (
                 <li key={item.href}>
@@ -57,7 +57,7 @@ export default function Footer() {
 
           {/* Jam buka */}
           <Reveal delay={0.16}>
-            <h4 className="text-xs uppercase tracking-widest2 text-gold">Jam Buka</h4>
+            <h3 className="text-xs uppercase tracking-widest2 text-gold">Jam Buka</h3>
             <ul className="mt-5 space-y-3">
               {brand.hours.map((h) => (
                 <li key={h.label} className="flex justify-between gap-4 text-sm">

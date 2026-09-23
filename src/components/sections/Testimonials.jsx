@@ -7,7 +7,7 @@ import { IconStar } from '../common/Icons'
 function Stars({ rating }) {
   const reduced = useReducedMotion()
   return (
-    <div className="flex gap-1" aria-label={`Rating ${rating} dari 5`}>
+    <div className="flex gap-1" role="img" aria-label={`Rating ${rating} dari 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <motion.span
           key={i}
@@ -44,15 +44,10 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 0.12}>
               <figure className="card flex h-full flex-col p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold/40 hover:shadow-card">
-                {/* Tanda kutip dekoratif */}
-                <span
-                  aria-hidden="true"
-                  className="pointer-events-none absolute right-5 top-3 font-display text-6xl text-gold/[0.12] select-none"
-                >
-                  &rdquo;
-                </span>
-
                 <Stars rating={t.rating} />
+                <figcaption className="sr-only">
+                  {t.name} memberi rating {t.rating} dari 5
+                </figcaption>
 
                 <blockquote className="mt-5 flex-1 text-[15px] leading-relaxed text-ink-muted">
                   {t.quote}

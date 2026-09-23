@@ -38,3 +38,9 @@ lerna-debug.log*
 # Misc
 *.tsbuildinfo
 .cache/
+
+.vercel
+.env*
+
+# Lighthouse reports (audit lokal)
+lighthouse-report*.json

@@ -36,7 +36,7 @@ export default function Navbar() {
           <Logo className="h-10 w-10 transition-transform duration-500 group-hover:rotate-6" />
           <span className="leading-tight">
             <span className="block font-display text-lg text-ink">{brand.name}</span>
-            <span className="block text-[10px] uppercase tracking-widest2 text-gold-dim">
+            <span className="block text-[10px] uppercase tracking-widest2 text-gold/80">
               Pharmacy
             </span>
           </span>

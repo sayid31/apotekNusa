@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apotek-nusa.vercel.app/sitemap.xml

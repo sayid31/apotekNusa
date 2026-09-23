@@ -83,6 +83,50 @@ body {
   }
 }
 
+/* ---------- Performa ---------- */
+/* Section di luar viewport dilewati oleh browser saat load
+   (style/layout/paint baru dihitung saat mendekat). */
+.cv-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
+/* Glow lembut tanpa filter blur — radial-gradient jauh lebih murah
+   di-daripada blur-130px, hasil visualnya tetap sama. */
+.glow-gold {
+  background: radial-gradient(
+    circle,
+    rgba(212, 169, 74, 0.16) 0%,
+    rgba(212, 169, 74, 0.05) 45%,
+    rgba(212, 169, 74, 0) 70%
+  );
+}
+.glow-teal {
+  background: radial-gradient(
+    circle,
+    rgba(63, 191, 168, 0.12) 0%,
+    rgba(63, 191, 168, 0.04) 45%,
+    rgba(63, 191, 168, 0) 70%
+  );
+}
+
+/* ---------- Aksesibilitas ---------- */
+
+/* Skip link — terlihat hanya saat fokus keyboard */
+.skip-link {
+  @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-gold px-6 py-3 text-sm font-semibold text-[#1A1206] shadow-gold transition-transform duration-300;
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* Focus ring seragam untuk navigasi keyboard */
+:focus-visible {
+  outline: 2px solid #f2cc7b;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
 /* ---------- Reduced motion: matikan semua animasi ---------- */
 @media (prefers-reduced-motion: reduce) {
   html {
