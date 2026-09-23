@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from 'framer-motion'
 import { brand, hero } from '../../data/content'
 import GoldParticles from '../common/GoldParticles'
-import { IconArrow, IconWhatsapp, IconCheck } from '../common/Icons'
+import { IconArrow, IconWhatsapp } from '../common/Icons'
 
 /* ============================================================
    Ilustrasi hero — vitrin apotek premium.
@@ -387,28 +387,6 @@ export default function Hero() {
 
           {/* Partikel emas */}
           <GoldParticles density={40} />
-
-          {/* Kartu kredibilitas — nada bisnis, bukan stiker main-main */}
-          <div className="absolute -left-3 top-8 flex items-center gap-3 rounded-lg border border-white/10 bg-deep/[0.92] px-4 py-3 shadow-card backdrop-blur animate-float">
-            <span className="flex h-8 w-8 items-center justify-center rounded-md border border-teal/30 bg-teal/10">
-              <IconCheck className="h-4 w-4 text-teal" />
-            </span>
-            <span className="leading-tight">
-              <span className="block text-[10px] uppercase tracking-widest text-ink-muted">
-                Resep
-              </span>
-              <span className="block text-[13px] font-medium text-ink">
-                Terverifikasi
-              </span>
-            </span>
-          </div>
-
-          <div className="absolute -right-1 bottom-10 rounded-lg border border-white/10 bg-deep/[0.92] px-4 py-3 shadow-card backdrop-blur animate-float-slow">
-            <span className="block text-[10px] uppercase tracking-widest text-ink-muted">
-              Pengantaran
-            </span>
-            <span className="block font-display text-lg text-gold">45 Menit</span>
-          </div>
         </motion.div>
       </div>
 
