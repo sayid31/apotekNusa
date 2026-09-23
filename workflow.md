@@ -1,7 +1,7 @@
 # Workflow — Landing Page "Apotek Nusa"
 
 Dokumen konsep &amp; alur kerja dari awal sampai akhir.
-Status: **IN PROGRESS — Fase 1–5 selesai (Fase 5: GitHub + Vercel live), tinggal penyerahan.**
+Status: **SELESAI — Fase 1–5 beres. Live di https://apotek-nusa.vercel.app (Lighthouse 96/100/100/100).**
 
 ---
 
@@ -286,7 +286,7 @@ konsistensi gerak terjamin otomatis di semua section.
 - [x] `npm run build`
 - [x] Deploy: **Vercel** — https://apotek-nusa.vercel.app (auto-deploy setiap `git push` ke `main`)
 - [ ] Pasang domain sendiri (opsional)
-- [ ] Serah terima: cara edit konten (`data/content.js`)
+- [x] Serah terima: cara edit konten (`data/content.js`) — terdokumentasi di `README.md`
 
 ---
 
@@ -315,4 +315,4 @@ konsistensi gerak terjamin otomatis di semua section.
 ---
 
 *Maintenance dokumen ini setiap kali ada keputusan baru.*
-*Status saat ini: Fase 1–5 selesai → sisa penyerahan (README + cara edit konten).*
+*Status saat ini: SEMUA FASE SELESAI — project beres diserahkan (README + panduan edit konten).*
