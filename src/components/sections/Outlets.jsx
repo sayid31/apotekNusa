@@ -131,7 +131,7 @@ export default function Outlets() {
               Temukan Apotek Nusa <span className="italic text-gold">terdekat</span>
             </>
           }
-          subtitle="Enam cabang di Jakarta, Bandung, dan Surabaya. Semuanya melayani resep, konsultasi, dan antar obat."
+          subtitle="Enam cabang di Jakarta, Bandung, dan Surabaya. Semuanya melayani resep, konsultasi, dan cek kesehatan ringan."
         />
 
         {/* ============ Kontrol pencarian ============ */}

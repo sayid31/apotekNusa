@@ -30,7 +30,7 @@ export const hero = {
   title: ['Jaga', 'kesehatan', 'keluarga', 'mulai', 'sekarang'],
   highlightWord: 'kesehatan',
   subtitle:
-    'Obatnya asli semua, apotekernya ramah diajak tanya-tanya, dan kalau tidak sempat keluar, obatnya bisa diantar ke rumah.',
+    'Obatnya asli semua, apotekernya ramah diajak tanya-tanya, dan buka 24 jam kalau butuh mendadak.',
   primaryCta: 'Kirim Resep',
   secondaryCta: 'Konsultasi Gratis',
   miniStats: [
@@ -44,7 +44,7 @@ export const stats = [
   { value: 12500, suffix: '+', label: 'Pelanggan Setia' },
   { value: 24, suffix: ' Jam', label: 'Buka Terus' },
   { value: 3200, suffix: '+', label: 'Resep Ditebus' },
-  { value: 45, suffix: ' Menit', label: 'Rata-rata Antar' },
+  { value: 6, suffix: '', label: 'Outlet di 3 Kota' },
 ]
 
 export const services = [
@@ -62,11 +62,6 @@ export const services = [
     icon: 'stethoscope',
     title: 'Cek Kesehatan Ringan',
     desc: 'Tensi, gula darah, dan kolesterol bisa dicek langsung di tempat, gratis.',
-  },
-  {
-    icon: 'truck',
-    title: 'Antar Cepat',
-    desc: 'Rata-rata 45 menit sampai ke rumah, khusus area Jakarta Pusat sekitarnya.',
   },
   {
     icon: 'shield',
@@ -131,7 +126,7 @@ export const testimonials = [
     role: 'Ibu dari dua anak',
     rating: 5,
     quote:
-      'Anak saya demam jam 12 malam, apotek lain tutup semua. Untungnya Apotek Nusa antar, 40 menit sudah sampai. Lega banget.',
+      'Anak saya demam jam 12 malam, apotek lain tutup semua. Untungnya Apotek Nusa buka 24 jam dan apotekernya sabar jelasin obat anak. Lega banget.',
   },
   {
     name: 'Bagas Pratama',
@@ -156,11 +151,11 @@ export const faqs = [
   },
   {
     q: 'Gimana cara kirim resep dokter?',
-    a: 'Gampang: fotokan resepnya, kirim lewat WhatsApp. Nanti apoteker yang cek stok dan total biayanya dulu, setelah itu obat kami antar ke alamat Anda.',
+    a: 'Gampang: fotokan resepnya, kirim lewat WhatsApp. Nanti apoteker yang cek stok dan total biayanya dulu, tinggal datang ambil — tidak perlu antre.',
   },
   {
-    q: 'Berapa lama pengantaran obat?',
-    a: 'Rata-rata 45 menit di Jakarta Pusat sekitarnya. Kalau pesan di luar jam buka, obatnya kami antar pagi harinya, kecuali Anda pakai layanan darurat 24 jam.',
+    q: 'Outletnya di mana aja?',
+    a: 'Sekarang ada enam cabang: dua di Jakarta Pusat, dua di Jakarta Selatan, satu di Bandung, dan satu di Surabaya. Cek di bagian outlet, ya.',
   },
   {
     q: 'Kalau cuma mau tanya-tanya, boleh?',
@@ -168,7 +163,7 @@ export const faqs = [
   },
   {
     q: 'Bisa bayar pakai apa saja?',
-    a: 'Tunai, transfer, QRIS, sama GoPay/OVO/ShopeePay juga bisa. Untuk pesanan antar, boleh bayar pas barangnya sampai.',
+    a: 'Tunai, transfer, QRIS, sama GoPay/OVO/ShopeePay juga bisa.',
   },
 ]
 

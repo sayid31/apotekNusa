@@ -5,7 +5,6 @@ import {
   IconReceipt,
   IconChat,
   IconStethoscope,
-  IconTruck,
   IconShield,
   IconBell,
 } from '../common/Icons'
@@ -14,7 +13,6 @@ const iconMap = {
   receipt: IconReceipt,
   chat: IconChat,
   stethoscope: IconStethoscope,
-  truck: IconTruck,
   shield: IconShield,
   bell: IconBell,
 }
