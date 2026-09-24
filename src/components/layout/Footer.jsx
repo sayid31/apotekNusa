@@ -1,4 +1,5 @@
-import { brand, nav } from '../../data/content'
+import { Link } from 'react-router-dom'
+import { brand, nav, infoMenu } from '../../data/content'
 import { Logo, IconInstagram, IconFacebook, IconWhatsapp } from '../common/Icons'
 import Reveal from '../common/Reveal'
 
@@ -28,7 +29,7 @@ export default function Footer() {
                   key={i}
                   href={i === 2 ? brand.waLink : '#'}
                   target={i === 2 ? '_blank' : undefined}
-                  rel="noreferrer"
+                  rel={i === 2 ? 'noopener noreferrer' : undefined}
                   aria-label="Sosial media Apotek Nusa"
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-ink-muted transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/60 hover:text-gold"
                 >
@@ -43,13 +44,29 @@ export default function Footer() {
             <h3 className="text-xs uppercase tracking-widest2 text-gold">Navigasi</h3>
             <ul className="mt-5 space-y-3">
               {nav.map((item) => (
-                <li key={item.href}>
-                  <a
-                    href={item.href}
+                <li key={item.label}>
+                  <Link
+                    to={item.href}
                     className="text-sm text-ink-muted transition-colors hover:text-gold-bright"
                   >
                     {item.label}
-                  </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="mt-8 text-xs uppercase tracking-widest2 text-gold">
+              Halaman Informasi
+            </h3>
+            <ul className="mt-5 space-y-3">
+              {infoMenu.map((sub) => (
+                <li key={sub.href}>
+                  <Link
+                    to={sub.href}
+                    className="text-sm text-ink-muted transition-colors hover:text-gold-bright"
+                  >
+                    {sub.label}
+                  </Link>
                 </li>
               ))}
             </ul>

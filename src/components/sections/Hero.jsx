@@ -328,7 +328,7 @@ export default function Hero() {
             <a
               href={brand.waLink}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="btn-ghost"
             >
               <IconWhatsapp className="h-4 w-4 text-teal" />

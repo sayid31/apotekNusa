@@ -17,12 +17,19 @@ export const brand = {
 }
 
 export const nav = [
-  { label: 'Layanan', href: '#layanan' },
-  { label: 'Produk', href: '#produk' },
-  { label: 'Outlet', href: '#outlet' },
-  { label: 'Testimoni', href: '#testimoni' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Kontak', href: '#kontak' },
+  { label: 'Layanan', href: '/#layanan' },
+  { label: 'Promo', href: '/#promo' },
+  { label: 'Outlet', href: '/#outlet' },
+  { label: 'Testimoni', href: '/#testimoni' },
+  { label: 'Informasi', href: '/informasi', dropdown: true },
+  { label: 'Kontak', href: '/#kontak' },
+]
+
+/* Sub-menu "Informasi" — menunjuk ke bagian di halaman /informasi */
+export const infoMenu = [
+  { label: 'Karir', href: '/informasi#karir' },
+  { label: 'Tentang', href: '/informasi#tentang' },
+  { label: 'FAQ', href: '/informasi#faq' },
 ]
 
 export const hero = {
@@ -75,50 +82,78 @@ export const services = [
   },
 ]
 
-export const products = [
+export const promos = [
   {
-    name: 'Vitamin C 1000mg',
-    category: 'Vitamin & Suplemen',
-    price: 'Rp 45.000',
-    badge: 'Terlaris',
-    art: 'bottle',
+    period: 'Sampai 30 November',
+    discount: 'Beli 1 Gratis 1',
+    item: 'Vitamin C 1000mg',
+    desc: 'Buat stok sebulan di rumah, justru lebih pas ambil dua sekaligus.',
+    terms: 'Maksimal dua paket tiap orang, selama stoknya masih ada.',
   },
   {
-    name: 'Paracetamol 500mg',
-    category: 'Obat Pereda Nyeri',
-    price: 'Rp 18.000',
-    badge: null,
-    art: 'strip',
+    period: 'Sepanjang November',
+    discount: 'Diskon 30%',
+    item: 'Sirup batuk anak',
+    desc: 'Musim hujan batuk naik. Harganya sudah dipotong, apotekernya juga siap dihubungi.',
+    terms: 'Berlaku semua merek, tidak bisa digabung promo lain.',
   },
   {
-    name: 'Sirup Batuk Anak',
-    category: 'Obat Anak',
-    price: 'Rp 62.000',
-    badge: 'Pilihan Apoteker',
-    art: 'syrup',
-  },
-  {
-    name: 'Masker Medis 50 pcs',
-    category: 'Alat Kesehatan',
-    price: 'Rp 35.000',
-    badge: null,
-    art: 'mask',
-  },
-  {
-    name: 'Hand Sanitizer 500ml',
-    category: 'Perlindungan',
-    price: 'Rp 28.000',
-    badge: null,
-    art: 'pump',
-  },
-  {
-    name: 'Multivitamin Dewasa',
-    category: 'Vitamin & Suplemen',
-    price: 'Rp 89.000',
-    badge: 'Baru',
-    art: 'jar',
+    period: 'Min. belanja Rp150 ribu',
+    discount: 'Potong Rp20.000',
+    item: 'Belanja apa saja',
+    desc: 'Sekalian isi kabinet obat di rumah, kan makin banyak makin hemat.',
+    terms: 'Langsung dipotong di kasir, tidak perlu kode apa pun.',
   },
 ]
+
+export const about = {
+  paragraphs: [
+    'Apotek Nusa mulai tahun 2012, dari satu ruko kecil di Menteng. Waktu itu cuma ada satu apoteker, satu printer resep, dan tetangga yang datang hampir tiap malam nanya obat buat anaknya.',
+    'Pelanggannya kebanyakan dari mulut ke mulut. Ada yang rutin tiap bulan ambil obat darah tinggi, ada yang kirim resep dari luar kota terus ambil pas sampai. Lama-lama diminta buka di daerah lain, ya kami penuhi.',
+    'Sekarang outletnya sudah enam di tiga kota. Yang tidak berubah cuma satu: tetap ada apoteker yang jawab langsung, dan obatnya tetap dari distributor resmi.',
+  ],
+  points: [
+    {
+      title: 'Obat asli, tanpa kompromi',
+      desc: 'Ambil dari distributor resmi dan terdaftar BPOM. Kalau ada yang lebih murah tapi tidak jelas asalnya, tidak kami ambil.',
+    },
+    {
+      title: 'Tanya itu gratis',
+      desc: 'Mau nanya obat sebelum beli juga boleh. Kami jelasin sampai paham, tidak harus beli.',
+    },
+    {
+      title: 'Yang jaga apoteker',
+      desc: 'Setiap outlet didampingi apoteker bersertifikat. Bukan cuma kasir yang jawab.',
+    },
+  ],
+}
+
+export const careers = {
+  intro:
+    'Kami buka peluang buat yang rapi urusan obat dan enak diajak ngobrol sama pasien. Kirim CV-nya lewat WhatsApp atau email, dibalas paling lama seminggu.',
+  positions: [
+    {
+      title: 'Apoteker',
+      type: 'Penuh waktu',
+      place: 'Menteng, Jakarta',
+      note: 'Wajib punya STR aktif. Kamu yang pegang resep dan jawab konsultasi pasien.',
+    },
+    {
+      title: 'Admin Outlet',
+      type: 'Penuh waktu',
+      place: 'Semua outlet',
+      note: 'Jaga loket, urus stok harian, dan bantu pelanggan yang bingung pilih obat. Baru lulus pun boleh coba.',
+    },
+    {
+      title: 'Apoteker Paruh Waktu',
+      type: 'Paruh waktu',
+      place: 'Bandung & Surabaya',
+      note: 'Buat yang jam kerjanya fleksibel. Shift-nya dibicarakan sendiri sama outlet.',
+    },
+  ],
+  apply:
+    'Cara melamarnya gampang: kirim CV sama satu paragraf kenapa mau kerja di apotek ke halo@apotecnusa.id, atau chat langsung lewat WhatsApp. Mau tanya-tanya dulu sebelum kirim juga boleh.',
+}
 
 export const testimonials = [
   {
@@ -140,7 +175,7 @@ export const testimonials = [
     role: 'Pekerja kantoran',
     rating: 5,
     quote:
-      'Kirim resep lewat WhatsApp pas jam kerja, sorenya obat sudah sampai di kantor. Tinggal tunggu, tidak perlu antre.',
+      'Kirim resep lewat WhatsApp pas jam kerja, sorenya tinggal ambil di outlet. Sudah disiapkan, jadi tidak perlu antre.',
   },
 ]
 

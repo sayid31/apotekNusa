@@ -73,7 +73,7 @@ function OutletCard({ outlet, now, selected, onSelect }) {
         <a
           href={mapsLink(outlet.address)}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-xs font-medium text-ink transition-all duration-300 hover:border-gold/50 hover:text-gold-bright"
         >
           Rute
@@ -83,7 +83,7 @@ function OutletCard({ outlet, now, selected, onSelect }) {
         <a
           href={waLink(outlet)}
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           aria-label={`Chat ${outlet.name} via WhatsApp`}
           className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-teal/30 bg-teal/10 text-teal transition-all duration-300 hover:bg-teal/20"
         >
@@ -272,7 +272,7 @@ export default function Outlets() {
                       <a
                         href={mapsLink(active.address)}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="btn-gold flex-1 !px-4 !py-2 text-xs"
                       >
                         Buka di Google Maps
@@ -281,7 +281,7 @@ export default function Outlets() {
                       <a
                         href={waLink(active)}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="btn-ghost !px-4 !py-2 text-xs"
                       >
                         Chat

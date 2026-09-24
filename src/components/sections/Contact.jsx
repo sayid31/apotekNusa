@@ -110,7 +110,7 @@ export default function Contact() {
                     <a
                       href="https://maps.google.com/?q=Jakarta+Pusat"
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-gold/40 px-3.5 py-1.5 text-[11px] font-medium text-gold transition-all duration-300 hover:bg-gold hover:text-[#1A1206]"
                     >
                       Rute
@@ -125,7 +125,7 @@ export default function Contact() {
             <a
               href={brand.waLink}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="card group flex items-center justify-between gap-4 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-teal/50 hover:shadow-card"
             >
               <div className="flex items-center gap-4">

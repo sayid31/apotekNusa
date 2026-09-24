@@ -1,7 +1,7 @@
 # Workflow — Landing Page "Apotek Nusa"
 
 Dokumen konsep &amp; alur kerja dari awal sampai akhir.
-Status: **SELESAI — Fase 1–5 beres. Live di https://apotek-nusa.vercel.app (Lighthouse 96/100/100/100).**
+Status: **SELESAI — Fase 1–5 + revisi ronde 2 (Promo, halaman /informasi, keamanan). Live di https://apotek-nusa.vercel.app.**
 
 ---
 
@@ -109,17 +109,16 @@ produk) — tajam di segala layar, gampang diwarnai emas, tanpa file eksternal.
 
 | #   | Section                  | Isi utama                                                      | Animasi                                       |
 | --- | ------------------------ | -------------------------------------------------------------- | --------------------------------------------- |
-| 0   | **Navbar**               | Logo Apotek Nusa, nav, CTA "Pesan Obat"                        | Menyusut + backdrop blur saat scroll          |
+| 0   | **Navbar**               | Logo Apotek Nusa, nav (dropdown "Informasi"), CTA "Chat Apoteker" | Menyusut + backdrop blur saat scroll; dropdown hover/klik |
 | 1   | **Hero + CTA**           | Headline, sub, 2 tombol, visual apotek                         | **Kuat** — lihat §5                           |
 | 2   | **Statistik**            | 4 angka kepercayaan (pelanggan, jam layanan, dll)              | Counter angka naik saat masuk layar           |
-| 3   | **Layanan**              | 6 kartu layanan (resep, konsultasi, cek kesehatan, antar, dll) | Reveal berjenjang + ikon SVG animasi          |
-| 4   | **Produk unggulan**      | Grid kartu produk dengan harga &amp; badge                     | Kartu melayang saat hover, reveal saat scroll |
+| 3   | **Layanan**              | Kartu layanan (resep, konsultasi, cek kesehatan, dll)          | Reveal berjenjang + ikon SVG animasi          |
+| 4   | **Promo**                | 3 pamflet promo (periode, potongan, syarat cetak kecil)        | Kartu melayang saat hover, reveal saat scroll |
 | 5   | **Cari Outlet**          | Pencarian + filter kota + peta 6 cabang interaktif             | Reveal, pin peta, status Buka/Tutup realtime   |
 | 6   | **Testimoni**            | Kartu ulasan + rating bintang                                  | Reveal + bintang terisi satu per satu         |
-| 7   | **FAQ**                  | Akordeon pertanyaan umum                                       | Rotasi ikon + tinggi transisi halus           |
-| 8   | **Kontak / Lokasi**      | Alamat, jam buka, peta, WhatsApp                               | Reveal + badge "Buka/Tutup" realtime          |
-| 9   | **Footer**               | Nav, sosial media, copyright                                   | Minimal, tanpa gerak                          |
-| —   | **Preloader** (opsional) | Logo Apotek Nusa singkat                                       | Maks. 1 detik, tidak memblokir                |
+| 7   | **Kontak / Lokasi**      | Alamat, jam buka, peta, WhatsApp                               | Reveal + badge "Buka/Tutup" realtime          |
+| 8   | **Footer**               | Nav (termasuk tautan Informasi), sosial media, copyright       | Minimal, tanpa gerak                          |
+| —   | **/informasi** (halaman terpisah) | Tentang → Karir → FAQ (`/#tentang`, `/#karir`, `/#faq`) | Reveal + akordeon FAQ                        |
 
 
 ---
@@ -306,13 +305,34 @@ konsistensi gerak terjamin otomatis di semua section.
 
 ## 9. Out of Scope (tidak dikerjakan di versi ini)
 
-- Halaman terpisah (tentang, blog, karier)
+- Blog / CMS (halaman Tentang & Karir sudah ada di `/informasi`)
 - Backend / form submission nyata (CTA mengarah WhatsApp)
 - Login, keranjang belanja, payment gateway
 - Toggle bahasa bilingual
-- CMS
+
+---
+
+## 10. Revisi Ronde 2 ( Oktober 2025 )
+
+Empat permintaan, semua selesai &amp; ter-deploy:
+
+1. **Section Produk → Promo.** Grid daftar produk diganti 3 pamflet promo
+   (`Promos.jsx` + data `promos`): periode, nominal promo, barang, dan syarat
+   dalam cetak kecil ala kertas promo.
+2. **Menu "Informasi" dengan dropdown** (Karir → Tentang → FAQ), berujung ke
+   **halaman baru `/informasi`** (bukan digabung halaman utama).
+   React Router 7 + `ScrollManager` (scroll ke hash dengan retry untuk section
+   lazy-load), judul halaman per rute, halaman 404 custom.
+   FAQ dikeluarkan dari beranda ke halaman ini.
+3. **Copy humanis** — seluruh teks (promo, tentang, karir, testimoni) ditulis
+   nada sehari-hari, bukan gaya AI.
+4. **Keamanan diperkuat** — `vercel.json`: SPA rewrite + CSP
+   (`script-src 'self'`, `frame-ancestors 'none'`), HSTS, X-Frame-Options DENY,
+   nosniff, Referrer-Policy, Permissions-Policy; semua `target="_blank"` kini
+   `rel="noopener noreferrer"`; `npm audit --omit=dev` = 0 vulnerability
+   (2 temuan tersisa hanya devDependency, jangan `audit fix --force`).
 
 ---
 
 *Maintenance dokumen ini setiap kali ada keputusan baru.*
-*Status saat ini: SEMUA FASE SELESAI — project beres diserahkan (README + panduan edit konten).*
+*Status saat ini: SELESAI — Fase 1–5 + revisi ronde 2 (Promo, /informasi, keamanan).*
