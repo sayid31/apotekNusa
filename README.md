@@ -82,11 +82,11 @@ Build script `npm run build` juga menjalankan `scripts/inline-build.mjs` yang me
 
 ## Kualitas (Lighthouse, production)
 
-| Kategori | Skor |
-|---|---|
-| Performance | **96** (mobile) / 100 (desktop) |
-| Accessibility | **100** |
-| Best Practices | **100** |
-| SEO | **100** |
+| Halaman | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| `/` (beranda) | **92** (mobile) | 100 | 100 | 100 |
+| `/informasi` | **96** (mobile) | 100 | 100 | 100 |
+
+CLS 0 di kedua halaman. (Desktop umumnya lebih tinggi — angka di atas diukur throttling mobile.)
 
 Aksesibilitas: skip link, focus ring `:focus-visible`, hierarki heading, `aria-expanded`/`aria-controls` pada FAQ & dropdown navbar (hover/fokus/klik, tutup dengan Escape), dan dukungan penuh `prefers-reduced-motion` (semua animasi nonaktif).

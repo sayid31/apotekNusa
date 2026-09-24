@@ -332,6 +332,11 @@ Empat permintaan, semua selesai &amp; ter-deploy:
    `rel="noopener noreferrer"`; `npm audit --omit=dev` = 0 vulnerability
    (2 temuan tersisa hanya devDependency, jangan `audit fix --force`).
 
+**Catatan performa ronde 2:** `/informasi` sempat dapat CLS 0.4 (performa 76)
+karena halaman di-lazy — fallback Suspense `min-h-[60vh]` diganti konten saat
+chunk datang. Dijadikan eager import (hanya 404 yang lazy) → CLS 0,
+performa 96. Beranda tetap 92/100/100/100.
+
 ---
 
 *Maintenance dokumen ini setiap kali ada keputusan baru.*
